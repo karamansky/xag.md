@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Blog List shortcode - Masonry type style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+	
+	&.mkdf-bl-masonry {
+		transition: none !important;
+		overflow: visible !important;
+		
+		.mkdf-blog-list {
+			opacity: 0;
+			@include mkdfTransition(opacity .2s ease-out);
+		}
+		
+		.mkdf-bl-item {
+			vertical-align: top;
+			z-index: 100;
+		}
+		
+		.mkdf-bl-item,
+		.mkdf-bl-grid-sizer {
+			width: 100%;
+		}
+		
+		.mkdf-bl-grid-gutter {
+			width: 0;
+		}
+		
+		$masonry_columns_number: ('two', 'three', 'four', 'five');
+		
+		@for $i from 0 to length($masonry_columns_number) {
+			&.mkdf-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.mkdf-bl-item,
+				.mkdf-bl-grid-sizer {
+					width: $column_width;
+				}
+			}
+		}
+
+        .mkdf-post-image{
+            margin-bottom: 0;
+        }
+
+        .mkdf-bli-content{
+            padding: 36px 30px 30px;
+            background-color: #fff;
+
+            .mkdf-post-excerpt{
+                margin: 14px 0 0;
+            }
+
+            .mkdf-post-read-more-button{
+                margin: 13px 0 10px;
+            }
+        }
+
+	}
+}
+/* ==========================================================================
+   Blog List shortcode - Masonry type style - end
+   ========================================================================== */

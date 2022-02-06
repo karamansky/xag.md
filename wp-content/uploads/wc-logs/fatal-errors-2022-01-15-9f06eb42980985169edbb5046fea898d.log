@@ -1,0 +1,10 @@
+2022-01-15T12:51:15+00:00 CRITICAL Uncaught Error: Call to undefined function mime_content_type() in /home/agricos/public_html/wp-content/plugins/revslider/admin/includes/functions-admin.class.php:561
+Stack trace:
+#0 /home/agricos/public_html/wp-content/plugins/revslider/admin/revslider-admin.class.php(871): RevSliderFunctionsAdmin->import_upload_media()
+#1 /home/agricos/public_html/wp-includes/class-wp-hook.php(303): RevSliderAdmin->do_ajax_action('')
+#2 /home/agricos/public_html/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#3 /home/agricos/public_html/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#4 /home/agricos/public_html/wp-admin/admin-ajax.php(187): do_action('wp_ajax_revslid...')
+#5 {main}
+  thrown в /home/agricos/public_html/wp-content/plugins/revslider/admin/includes/functions-admin.class.php на строке 561
+

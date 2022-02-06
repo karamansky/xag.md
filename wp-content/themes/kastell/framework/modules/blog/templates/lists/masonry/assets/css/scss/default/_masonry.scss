@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Blog List - Masonry style - begin
+   ========================================================================== */
+
+.mkdf-blog-holder {
+	
+    &.mkdf-blog-masonry {
+
+        article {
+            margin: 0 0 20px;
+            padding: 0 0 30px;
+
+            .mkdf-post-read-more-button {
+                margin-top: 15px;
+            }
+
+            &.mkdf-post-has-media {
+                
+                .mkdf-post-heading {
+
+                    .mkdf-post-date-inner{
+                        display: inline-block;
+                        position: absolute;
+                        top: 12px;
+                        left: 12px;
+                        background-color: #fff;
+                        text-align: center;
+                        padding: 14px 15px 2px;
+                        z-index: 1;
+
+                        .mkdf-post-date-day,
+                        .mkdf-post-date-month{
+                            color: $default-heading-color;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                        }
+
+                        .mkdf-post-date-day{
+                            font-size: 24px;
+                            font-family: $default-heading-font;
+                            line-height: 1em;
+                        }
+
+                        .mkdf-post-date-month{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .mkdf-post-content{
+                overflow: hidden;
+
+                &:hover {
+                    .mkdf-post-image {
+                        a {
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                        img {
+                            @include mkdfTransform(scale(1.012));
+                        }
+                    }
+                }
+
+                .mkdf-post-text{
+                    padding: 37px 30px 40px;
+                    background-color: #fff;
+                }
+            }
+
+            .mkdf-post-image {
+                a {
+                    display: block;
+
+                    &:after {
+                        @include mkdfAbsoluteHolderLayout();
+                        content: '';
+                        background-color: rgba(#000, 0.05);
+                        opacity: 0;
+                        @include mkdfTransition(opacity .2s ease-in-out);
+                    }
+                }
+
+                img {
+                    @include mkdfTransform(scale(1) translateZ(0));
+                    @include mkdfTransition(all 0.25s ease-in-out);
+                    @include mkdfTransformOrigin(0 50%);
+                    backface-visibility: hidden;
+                }
+            }
+
+            &.format-quote {
+                .mkdf-post-title {
+                    font-style: italic;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+
+                    a{
+                        &:before{
+                            content: '“';
+                        }
+                        &:after{
+                            content: '”';
+                        }
+                    }
+                }
+
+                @include laptop-landscape-medium{
+                    .mkdf-post-mark .mkdf-quote-mark{
+                        position: relative;
+                        right: -21px;
+                    }
+                }
+
+                .mkdf-post-content{
+                    .mkdf-post-text{
+                        padding: 39px 30px 5px;
+                        background-color: #fff;
+
+                        .mkdf-post-text-main{
+                            text-align: left;
+
+                            .mkdf-quote-author{
+                                position: relative;
+                                text-transform: uppercase;
+                                color: $first-main-color;
+                                font-size: 14px;
+                                font-weight: 700;
+                                letter-spacing: .1em;
+
+                                .mkdf-author-name{
+                                    padding-left: 35px;
+                                }
+
+                                &:before{
+                                    content: ' ';
+                                    width: 25px;
+                                    height: 2px;
+                                    background-color: $first-main-color;
+                                    position: absolute;
+                                    top: 50%;
+                                    @include mkdfTransform(translateY(-50%));
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &.format-link {
+                .mkdf-post-title {
+                    font-style: italic;
+                    font-weight: 400;
+                }
+                .mkdf-post-content{
+                    .mkdf-post-text{
+                        padding: 39px 30px 13px;
+                        background-color: #fff;
+                    }
+                }
+
+                @include laptop-landscape-medium{
+                    .mkdf-post-mark .mkdf-link-mark{
+                        position: relative;
+                        right: -15px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Masonry style - end
+   ========================================================================== */

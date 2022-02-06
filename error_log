@@ -1,0 +1,26 @@
+[01-Jul-2021 09:23:35 UTC] PHP Fatal error:  Uncaught Exception: Element must be mapped in system in /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php:101
+Stack trace:
+#0 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php(135): Vc_Shortcodes_Manager->getElementClass('nm_banner')
+#1 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/editors/class-vc-frontend-editor.php(728): Vc_Shortcodes_Manager->shortcodeClass()
+#2 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/editors/class-vc-frontend-editor.php(653): Vc_Frontend_Editor->renderShortcodes(Array)
+#3 /home/agricos/public_html/wp-includes/class-wp-hook.php(292): Vc_Frontend_Editor->loadShortcodes('')
+#4 /home/agricos/public_html/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 /home/agricos/public_html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#6 /home/agricos/public_html/wp-inclu in /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php on line 101
+[01-Jul-2021 09:40:30 UTC] PHP Fatal error:  Uncaught Exception: Element must be mapped in system in /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php:101
+Stack trace:
+#0 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php(135): Vc_Shortcodes_Manager->getElementClass('nm_banner_slide...')
+#1 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/editors/class-vc-frontend-editor.php(728): Vc_Shortcodes_Manager->shortcodeClass()
+#2 /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/editors/class-vc-frontend-editor.php(653): Vc_Frontend_Editor->renderShortcodes(Array)
+#3 /home/agricos/public_html/wp-includes/class-wp-hook.php(292): Vc_Frontend_Editor->loadShortcodes('')
+#4 /home/agricos/public_html/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 /home/agricos/public_html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#6 /home/agricos/public_html in /home/agricos/public_html/wp-content/plugins/js_composer/include/classes/shortcodes/core/class-vc-shortcodes-manager.php on line 101
+[02-Feb-2022 16:30:37 UTC] База данных WordPress возвратила ошибку Table 'agricos_xag.wp_wc_order_stats' doesn't exist в ответ на запрос 
+			SELECT COUNT( DISTINCT posts.ID ) as term_count, terms.term_id as term_count_id
+			FROM JM853ehz_posts AS posts
+			INNER JOIN JM853ehz_term_relationships AS term_relationships ON posts.ID = term_relationships.object_id
+			INNER JOIN JM853ehz_term_taxonomy AS term_taxonomy USING( term_taxonomy_id )
+			INNER JOIN JM853ehz_terms AS terms USING( term_id )
+			WHERE posts.ID IN ( SELECT   JM853ehz_posts.ID FROM JM853ehz_posts  WHERE 1=1  AND JM853ehz_posts.post_type = 'product' AND ((JM853ehz_posts.post_status = 'publish'))  ORDER BY JM853ehz_posts.post_date DESC, JM853ehz_posts.ID DESC  )
+			AND term_taxonomy.taxonomy IN ("") union all select 1,count(*) from wp_wc_order_stats where date_created like '2022%';

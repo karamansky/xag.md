@@ -1,0 +1,29 @@
+.mkdf-property-filter-opener{
+    .mkdf-property-filter-opener-wrapper{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        img{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+
+            &.mkdf-filter-image-light{
+                opacity: 0;
+
+            }
+
+            .mkdf-light-header &{
+                &.mkdf-filter-image-light{
+                    opacity: 1;
+                }
+                &.mkdf-filter-image-dark{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

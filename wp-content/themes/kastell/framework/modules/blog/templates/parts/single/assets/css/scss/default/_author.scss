@@ -1,0 +1,108 @@
+/* Single author box styles - begin
+	====================================================================== */
+
+.mkdf-author-description {
+    @include mkdfRelativeHolderLayout();
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    box-sizing: border-box;
+
+    .mkdf-author-description-inner {
+        padding: 41px 0 39px;
+        min-height: 78px; // static height of author image -- mkdf-author-description-image
+        clear: both;
+    }
+
+    .mkdf-author-description-content {
+        display: table;
+        position: relative;
+        padding: 0 30px;
+    }
+
+    .mkdf-author-description-image {
+        width: 175px;
+        margin: 0 auto;
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 30px;
+        box-sizing: border-box;
+
+        img {
+            display: block;
+            border-radius: 5em;
+        }
+    }
+
+    .mkdf-author-description-text-holder {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        padding: 4px 0;
+
+        .mkdf-author-name {
+            margin: 0;
+
+            a {
+                color: $default-heading-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .mkdf-author-email {
+            margin: 0;
+        }
+
+        .mkdf-author-text {
+            @include mkdfRelativeHolderLayout();
+
+            > p {
+                margin: 7px 0 9px;
+            }
+        }
+
+        .mkdf-author-social-icons {
+            @include mkdfRelativeHolderLayout();
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0;
+                margin: 0 10px 0 0;
+                font-size: 14px;
+                color: $default-heading-color;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait {
+        .mkdf-author-description-content {
+            padding: 0;
+        }
+        .mkdf-author-description-image {
+            display: block;
+            width: 100%;
+        }
+        .mkdf-author-description-text-holder {
+            display: block;
+            padding: 0;
+            margin-top: 30px;
+        }
+    }
+}
+
+/* Single author box styles - end
+	====================================================================== */

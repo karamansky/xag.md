@@ -1,0 +1,196 @@
+/* ==========================================================================
+# Fullscreen search - start
+========================================================================== */
+
+
+/* Fullscreen search general style - start
+========================================================================== */
+
+.mkdf-fullscreen-search-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 105;
+    opacity: 0;
+	
+    .mkdf-fullscreen-search-table {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mkdf-fullscreen-search-cell {
+        @include mkdfTableCellLayout();
+        text-align: center;
+    }
+
+    .mkdf-form-holder-inner {
+        position: relative;
+        width: 40%;
+        margin: auto;
+
+        .mkdf-line {
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            border-bottom: 1px solid #3b3e41;
+            @include mkdfTransition(all .3s .2s);
+
+            .mkdf-fullscreen-search-opened & {
+                width: 100%;
+                @include mkdfTransition(width 0.5s ease .6s);
+            }
+        }
+    }
+
+    .mkdf-field-holder {
+        display: block;
+        position: relative;
+    }
+
+    .mkdf-search-field {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        background: transparent;
+        outline: none;
+        font-size: 60px;
+        color: #fff;
+        line-height: 2em;
+        font-weight: 400;
+        font-family: $default-heading-font;
+
+        &:focus{
+            color: #fff;
+        }
+    }
+
+    .mkdf-search-submit {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: auto;
+        font-size: 40px;
+        line-height: 1em;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        opacity: 0;
+        cursor: pointer;
+        @include mkdfTransition(all .3s .2s);
+        
+        &:hover {
+            color: $default-heading-color;
+        }
+
+        .mkdf-fullscreen-search-opened & {
+            opacity: 1;
+            bottom: 13px;
+            @include mkdfTransition(color 0.2s ease, opacity .2s ease-out 1.1s, bottom .4s ease-out .9s);
+        }
+    }
+
+    .mkdf-fullscreen-search-close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: $first-main-color;
+        font-size: 45px;
+        opacity: 0;
+        visibility: hidden;
+	    z-index: 1;
+        
+        .admin-bar & {
+            top: 72px;
+        }
+    
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+/* Fullscreen search general style - end
+========================================================================== */
+
+/* Fullscreen search fade style - start
+========================================================================== */
+
+.mkdf-search-fade .mkdf-fullscreen-search-holder {
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    z-index: 112;
+    box-sizing: border-box;
+}
+
+.mkdf-search-fade-out.mkdf-search-fade .mkdf-fullscreen-search-holder {
+    @include mkdfAnimation(search_fade_out .2s ease-out both);
+}
+
+.mkdf-search-fade-in.mkdf-search-fade .mkdf-fullscreen-search-holder.mkdf-animate {
+    @include mkdfAnimation(search_fade_in .3s ease both);
+}
+
+.mkdf-search-fade .mkdf-fullscreen-search-holder.mkdf-animate .mkdf-fullscreen-search-close {
+    opacity: 1;
+    visibility: visible;
+}
+
+@-webkit-keyframes search_fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes search_fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes search_fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes search_fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fullscreen search fade style - end
+========================================================================== */
+
+/* ==========================================================================
+# Fullscreen search - end
+========================================================================== */

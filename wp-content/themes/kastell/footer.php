@@ -1,0 +1,1 @@
+<?php do_action( 'kastell_mkdf_get_footer_template' );

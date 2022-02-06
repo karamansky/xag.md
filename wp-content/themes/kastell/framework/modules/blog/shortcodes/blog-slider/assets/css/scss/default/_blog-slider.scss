@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Blog Slider shortcode style - begin
+   ========================================================================== */
+
+.mkdf-blog-slider-holder {
+
+    .mkdf-blog-slider{
+        list-style: none;
+
+        .owl-dots{
+            margin: 46px 0 0;
+        }
+    }
+    
+    &.mkdf-bs-carousel {
+        
+        .mkdf-item-image {
+            position: relative;
+
+            .mkdf-post-date-inner{
+                display: inline-block;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background-color: #fff;
+                text-align: center;
+                padding: 14px 15px 2px;
+                z-index: 1;
+
+                .mkdf-post-date-day,
+                .mkdf-post-date-month{
+                    color: #2d2e32;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                .mkdf-post-date-day{
+                    font-size: 24px;
+                    font-family: $default-heading-font;
+                    line-height: 1em;
+                }
+
+                .mkdf-post-date-month{
+                    font-size: 14px;
+                }
+            }
+
+            a {
+                &:after {
+                    @include mkdfAbsoluteHolderLayout();
+                    content: '';
+                    background-color: rgba(#000, 0.05);
+                    opacity: 0;
+                    @include mkdfTransition(opacity .2s ease-in-out);
+                }
+            }
+
+            img {
+                display: block;
+                @include mkdfTransform(scale(1) translateZ(0));
+                @include mkdfTransition(all 0.25s ease-in-out);
+                transform-origin: 50% 100%;
+                backface-visibility: hidden;
+            }
+        }
+
+        .mkdf-blog-slider-item-inner {
+            overflow: hidden;
+
+            &:hover {
+                .mkdf-item-image {
+                    a {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                    img {
+                        @include mkdfTransform(scale(1.02));
+                    }
+                }
+            }
+        }
+
+        .mkdf-bli-content{
+            padding: 37px 30px 40px;
+            background-color: #fff;
+
+            .mkdf-post-title {
+                margin: 0 0 15px;
+            }
+
+            .mkdf-post-read-more-button {
+                margin: 16px 0 0;
+            }
+
+        }
+
+    }
+
+}
+/* ==========================================================================
+   Blog Slider shortcode style - end
+   ========================================================================== */

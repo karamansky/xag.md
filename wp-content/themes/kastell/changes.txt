@@ -1,0 +1,58 @@
+1.6
+- Added WordPress 5.5 compatibility
+- Added WooCommerce 4.x compatibility
+- Updated WPBakery page builder to 6.3.0
+- Updated Revolution Slider plugin to 6.2.22
+- Updated Image Map Pro plugin to 5.3.2
+- Updated Mikado Core to 1.3.1
+- Updated language files
+
+1.5
+- Added WooCommerce 3.8.1 compatibility
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.1.5
+- Updated Mikado Core to 1.3
+� Removed unused file instagram-redirect.php from Mikado Instagram Feed plugin
+� Removed unused file twitter-redirect.php from Mikado Twitter Feed plugin
+� Updated Mikado Instagram Feed plugin to 1.1.1
+� Updated Mikado Twitter Feed plugin to 1.1.1
+
+1.4
+- Added WooCommerce 3.6.5 compatibility
+- Updated WPBakery Page Builder to 6.0.3
+- Updated Revolution Slider to 6.0.3
+- Fixed Mobile Menu dropdown
+
+1.3
+- Added WooCommerce 3.6.1 compatibility
+- Updated Mikado Core to 1.2
+- Improved import functionality
+- Improved theme security
+
+1.2
+- Added WooCommerce 3.5.6 compatibility
+- Updated WPBakery Page Builder to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated Core plugin to 1.1
+- Updated Image Map Pro to 5.0.0
+- Updated pot file
+- Improved framework files
+
+1.1.1
+- Fixed Testimonials autoplay problem
+
+1.1
+- Added WooCommerce 3.4.3 compatibility
+- Added compatibility with PHP 7.2
+- Added Envato Market plugin as required
+- Updated Visual Composer to 5.5.2
+- Updated Revolution Slider to 5.4.8
+- Updated Image Map Pro to 4.4.2
+- Updated Mikado Core to 1.0.1
+- Fixed menu misalignment on latest Chrome
+- Fixed property category page
+- Fixed https problem with links
+- Fixed Image Map Pro plugin problem when shape name is changed
+- Fixed Warning: Illegal string offset 'background-color' for PHP versions 7+
+- Improved menu import functionality
+- Improved image map gallery to support image map pro 4.4.2

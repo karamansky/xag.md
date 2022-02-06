@@ -1,0 +1,17 @@
+.mkdf-blog-holder.mkdf-blog-standard article {
+    @include laptop-landscape-medium{
+        .mkdf-post-info-bottom{
+            .mkdf-post-info-bottom-left{
+                width: 90%;
+
+                >div{
+                    padding-right: 10px;
+                }
+            }
+
+            .mkdf-post-info-bottom-right {
+                width: 10%;
+            }
+        }
+    }
+}

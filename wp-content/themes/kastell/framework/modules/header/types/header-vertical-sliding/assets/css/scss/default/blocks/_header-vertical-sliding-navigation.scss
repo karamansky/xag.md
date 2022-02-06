@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Header Vertical - Sliding navigation style - begin
+   ========================================================================== */
+.mkdf-header-vertical-sliding {
+
+    .mkdf-vertical-menu-opener{
+        text-align: center;
+
+        &:hover {
+            .mkdf-line:before {
+                width: 25px;
+            }
+
+            .mkdf-line:after {
+                width: 35px;
+            }
+        }
+
+        .mkdf-line {
+            background-color: #000;
+            height: 2px;
+            margin: 0;
+            width: 35px;
+            top: 0;
+            left: 0;
+            @include mkdfTransition(all 0.3s);
+            position: relative;
+            display: inline-block;
+            border-radius: 6px;
+        }
+
+        .mkdf-line:after,
+        .mkdf-line:before {
+            background-color: inherit;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+
+            z-index: 1;
+            @include mkdfTransition(all 0.3s);
+            -webkit-backface-visibility: hidden; /*because X sign jumps on hover in Chrome*/
+        }
+
+        .mkdf-line:before {
+            top: -10px;
+            width: 35px;
+        }
+
+        .mkdf-line:after {
+            top: 10px;
+            width: 25px;
+        }
+
+        a{
+            font-size: 35px;
+            width: 35px;
+            height: 55px;
+            color: #000;
+            display: inline-block;
+            position: relative;
+            @include mkdfTransition(color 0.3s ease);
+        }
+    }
+
+    .mkdf-vertical-menu-nav-holder-outer{
+        width: 395px;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        @include mkdfTransform(translateX(-100%));
+        @include mkdfTransition(transform 0.3s ease);
+        z-index: 1;
+
+        &.active{
+            @include mkdfTransform(translateX(0%));
+        }
+
+        .mkdf-vertical-menu-nav-holder{
+            background-color: #fff;
+            display: table;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .mkdf-vertical-menu-holder-nav-inner{
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            nav.mkdf-fullscreen-menu{
+                padding: 0 0 0 38%;
+            }
+        }
+    }
+
+    nav.mkdf-fullscreen-menu {
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+        text-align: left;
+
+        ul {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            li {
+                margin: 0;
+                padding: 0;
+                text-align: left;
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 11px 0;
+                    font-size: 14px;
+                    line-height: 1em;
+                    letter-spacing: .03em;
+                    color: #848484;
+                    padding: 0 20% 0 0;
+                    font-weight: 400;
+
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        @include mkdfTransition(padding .25s);
+                    }
+
+                    &:before {
+                        content: ' ';
+                        position: absolute;
+                        top: 50%;
+                        left: -20px;
+                        width: 8px;
+                        height: 2px;
+                        background-color: $first-main-color;
+                        line-height: inherit;
+                        font-weight: normal;
+                        font-style: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        @include mkdfTransform(translateY(-50%));
+                        @include mkdfTransition(left .25s);
+                    }
+
+                    .mkdf-fullscreen-menu-arrow{
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: #2d2e32;
+
+                        span {
+                            padding: 0 10px 0 15px;
+                        }
+
+                        &:before {
+                            left: 0;
+                        }
+                    }
+                }
+
+                ul {
+                    padding: 0 0 0 5px;
+
+                    &.sub_menu {
+                        display: none;
+                    }
+
+                    li {
+                        &.current-menu-ancestor > a,
+                        &.current-menu-item > a {
+                            color: #2d2e32;
+
+                            span{
+                                padding: 0 10px 0 15px;
+                            }
+
+                            &:before{
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > ul {
+            display: block;
+
+            > li {
+
+                > a {
+                    font-size: 14px;
+                    font-style: normal;
+                    z-index: 2;
+                    position: relative;
+                    text-transform: uppercase;
+                    margin: 12px 0;
+                    padding: 0;
+                    letter-spacing: .1em;
+                    font-weight: 600;
+
+                    span {
+                        padding: 5px;
+                        position: relative;
+                        display: inline-block;
+                        z-index: 2;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: calc(100% - 1px);
+                        z-index: 1;
+                        @include mkdfTransform(scale3d(0,1,1));
+                        @include mkdfTransformOrigin(100% 50%);
+                        background-color: $second-main-color;
+                        @include mkdfTransition(transform 0.3s);
+                    }
+
+                    &:before{
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: #1b1c21;
+                        font-weight: 700;
+                        letter-spacing: .0875em;
+
+                        &:after {
+                            @include mkdfTransform(scale3d(1,1,1));
+                            @include mkdfTransformOrigin(0 50%);
+                        }
+
+                        > span{
+                            padding: 5px;
+                        }
+                    }
+                }
+
+
+                &.open_sub > a,
+                &.current-menu-ancestor > a {
+                    color: #1b1c21;
+                    font-weight: 700;
+                    letter-spacing: .0875em;
+
+                    &:after {
+                        @include mkdfTransform(scale3d(1,1,1));
+                        @include mkdfTransformOrigin(0 50%);
+                    }
+
+                    > span{
+                        padding: 5px;
+                    }
+                }
+
+                &.open_sub > a{
+                    &:before,
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+/* ==========================================================================
+   Header Vertical - Sliding navigation style - end
+   ========================================================================== */

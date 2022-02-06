@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Sticky header style - begin
+   ========================================================================== */
+
+$sticky-header-height: 100px;
+
+.mkdf-sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $sticky-header-height;
+	width: 100%;
+    z-index: 100;
+	-webkit-backface-visibility: hidden;
+	@include mkdfTransform(translateY(-100%));
+	@include mkdfTransitionTransform(.6s ease);
+    
+    .mkdf-grid {
+        height: 100% !important; //override settings for other instances of this div
+    }
+    
+    &.header-appear {
+        transform: translateY(0%);
+    }
+
+    &.mkdf-menu-position-left{
+        .mkdf-sticky-holder{
+            .mkdf-position-left-inner{
+                height: 100%;
+
+                .mkdf-main-menu{
+                    padding: 0 0 0 20px;
+                }
+            }
+            .mkdf-position-right-inner{
+                height: auto;
+            }
+        }
+    }
+    
+    .mkdf-sticky-holder {
+	    position: relative;
+	    height: 100%;
+        z-index: 2;
+        background-color: #fff;
+        @include mkdfBoxShadow(0px 5px 12.09px 0.91px rgba(144, 144, 154, 0.07));
+        box-sizing: border-box;
+        
+        .mkdf-vertical-align-containers {
+            padding: 0 40px;
+        }
+
+	    .mkdf-logo-wrapper a {
+		    max-height: $sticky-header-height;
+	    }
+    }
+    
+    .admin-bar &.header-appear {
+        top: 32px;
+    }
+	
+	.mkdf-position-center-inner,
+	.mkdf-position-right-inner{
+		height: 100%;
+	}
+	
+	.mkdf-sticky-right {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.widget {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+}
+/* ==========================================================================
+   Sticky header style - end
+   ========================================================================== */

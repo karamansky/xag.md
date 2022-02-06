@@ -1,0 +1,36 @@
+.mkdf-header-vertical {
+
+    .mkdf-vertical-area-widget-holder {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        margin: 10px 0 0;
+        z-index: 100;
+        position: absolute;
+        bottom:28px;
+        left: 0;
+
+        .widget{
+            margin: 0 0 15px;
+            p{
+                maring: 4px 0;
+            }
+            a{
+                color: $default-text-color;
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .mkdf-vertical-alignment-center{
+
+        .mkdf-vertical-area-widget-holder {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}

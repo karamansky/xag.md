@@ -1,0 +1,96 @@
+// widgets spacing
+$widget-bottom-margin: 45px;
+
+// list items dimensions
+$widget-list-item-height: 20px;
+$widget-list-item-padding: 7px;
+
+$widget-title-margin: 21px;
+
+// list items color
+$widget-list-item-background-color: transparent;
+
+// list items border
+$widget-list-item-border-color: #cccccc;
+$widget-list-item-border-width: 1px;
+$widget-list-item-border-style: solid;
+
+// text
+$widget-text-color: #868686;
+$widget-heading-color: #fff;
+
+// links
+$widget-link-color: #868686;
+$widget-link-hover-color: #fff;
+
+// specific widgets
+$widget-search-form-height: 52px;
+$widget-tag-cloud-height: 30px;
+
+footer {
+
+    .dark-skin{
+        $widget-heading-color: #2d2e32;
+        $widget-link-hover-color: #000;
+        $widget-text-color: #2d2e32;
+
+        .mkdf-footer-bottom-inner{
+            border-top-color: #e8e8e8!important;
+        }
+
+        @import 'widgets/default-wordpress-widgets-flat';
+    }
+
+    .light-skin{
+        $widget-heading-color: #fff;
+        $widget-link-color: #868686;
+        $widget-link-hover-color: #fff;
+        $widget-text-color: #fff;
+
+        @import 'widgets/default-wordpress-widgets-flat';
+    }
+
+    @import 'widgets/default-wordpress-widgets-flat';
+
+    .mkdf-instagram-feed{
+        padding-right: 25%!important;
+    }
+
+    .mkdf-footer-bottom-holder{
+        .widget{
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .mkdf-grid-row{
+            > div{
+                &:first-child{
+                    .widget{
+                        text-align: left;
+                    }
+                }
+                &:last-child{
+                    text-align: right;
+
+                    .widget{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        &.light-skin{
+            .widget{
+                color: #fff;
+            }
+            a{
+                color: #fff;
+            }
+        }
+        &.dark-skin{
+            a{
+                color: #000;
+            }
+        }
+    }
+}

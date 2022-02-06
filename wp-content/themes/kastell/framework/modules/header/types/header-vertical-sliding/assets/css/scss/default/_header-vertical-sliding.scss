@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Header Vertical - Sliding style - begin
+   ========================================================================== */
+$vertical-menu-width: 90px;
+
+@import 'blocks/header-vertical-sliding-logo.scss';
+@import 'blocks/header-vertical-sliding-navigation.scss';
+@import 'blocks/header-vertical-sliding-widgets.scss';
+
+.mkdf-header-vertical-sliding {
+	
+	.mkdf-content,
+	footer {
+		padding-left: $vertical-menu-width;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-vertical-menu-area {
+		position: fixed;
+		width: $vertical-menu-width;
+		top: 0;
+		left: 0;
+		background-color: transparent;
+		height: 100%;
+		z-index: 101;
+		-webkit-backface-visibility: hidden;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		outline: none;
+		
+		.mkdf-vertical-menu-area-inner {
+			position: relative;
+			height: 100%;
+		}
+		
+		.mkdf-vertical-area-background {
+			position: fixed;
+			width: $vertical-menu-width;
+			height: 100%;
+			background-position: right top;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			background-size: cover;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 1;
+            @include mkdfBoxShadow(5px 0 40px 0px rgba(65,61,61,.07));
+			@include mkdfTransition(opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease);
+		}
+		
+		.mkdf-vertical-menu-holder {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+		}
+		
+		.mkdf-vertical-menu-table {
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.mkdf-vertical-menu-table-cell {
+			display: table-cell;
+			vertical-align: middle;
+
+            @include laptop-landscape-large{
+                padding-bottom: 50px;
+            }
+		}
+		
+		&.mkdf-with-scroll {
+			overflow: hidden;
+		}
+	}
+	
+	&.admin-bar .mkdf-vertical-menu-area {
+		top: 33px;
+	}
+	
+	.mkdf-vertical-menu-area.opened {
+		
+		.mkdf-vertical-area-background {
+			background-color: #fff;
+			border-color: transparent;
+		}
+		
+		.mkdf-logo-wrapper a {
+			
+			img.mkdf-normal-logo {
+				opacity: 0;
+			}
+			
+			img.mkdf-light-logo {
+				opacity: 1;
+			}
+		}
+		
+		.mkdf-vertical-menu-opener {
+			
+			.mkdf-line {
+				background-color: transparent!important;
+				@include mkdfTransition(none);
+			}
+			
+			.mkdf-line:after {
+				background-color: #000;
+				top: 0 !important;
+				width: 35px;
+				@include mkdfTransform(rotate(45deg));
+				@include mkdfTransition(background-color 0.3s ease, transform 0.3s ease);
+			}
+			
+			.mkdf-line:before {
+				background-color: #000;
+				top: 0 !important;
+				width: 35px;
+				@include mkdfTransform(rotate(-45deg));
+				@include mkdfTransition(background-color 0.3s ease, transform 0.3s ease);
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical - Sliding style - end
+   ========================================================================== */

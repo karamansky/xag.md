@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Header Box style - begin
+   ========================================================================== */
+
+.mkdf-header-box {
+
+    .mkdf-top-bar {
+        background-color: transparent;
+    }
+
+    .mkdf-page-header {
+
+        .mkdf-menu-area {
+            margin: 0 60px;
+            height: 90px;
+            background-color: #fff;
+
+            .mkdf-vertical-align-containers{
+                box-sizing: border-box;
+                display: block;
+                width: auto;
+
+                .mkdf-position-left{
+                    .mkdf-position-left-inner{
+                        height: 100%;
+                    }
+                }
+            }
+
+            .mkdf-logo-wrapper a {
+                max-height: 100px;
+            }
+
+            .mkdf-grid {
+
+                .mkdf-vertical-align-containers {
+                    padding: 0 38px;
+                    background-color: #fff;
+                    box-sizing: border-box;
+                }
+            }
+
+            .mkdf-position-right-inner {
+                height: auto;
+            }
+
+            .mkdf-main-menu {
+                margin-left: 19px;
+
+                > ul {
+
+                    > li {
+
+                        > a {
+                            padding: 0 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mkdf-drop-down .wide .second > .inner > ul {
+        width: 1170px; //1100 + 70, 70 is 35 of padding on each side
+    }
+
+    &.mkdf-grid-1000 .mkdf-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1000+70;
+    }
+
+    &.mkdf-grid-800 .mkdf-drop-down .wide .second > .inner > ul {
+        width: $grid-width-800+70;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .mkdf-header-box.mkdf-grid-1300 .mkdf-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1300+70;
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .mkdf-header-box.mkdf-grid-1200 .mkdf-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1200+70;
+    }
+}
+/* ==========================================================================
+   Header Box style - end
+   ========================================================================== */

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Footer styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   #Content bottom styles - begin
+   ========================================================================== */
+.mkdf-content-bottom .mkdf-content-bottom-inner {
+  box-sizing: border-box;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-grid {
+  padding: 20px 0;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-full-width {
+  padding: 20px 50px;
+}
+
+/* ==========================================================================
+   #Content bottom styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+.mkdf-page-footer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #1a1b19;
+  box-sizing: border-box;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder.mkdf-transparent-footer-top {
+  background-color: transparent;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-alignment-center {
+  text-align: center;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-alignment-left {
+  text-align: left;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-alignment-right {
+  text-align: right;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-inner {
+  box-sizing: border-box;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-inner.mkdf-grid {
+  padding: 67px 0 16px;
+}
+
+.mkdf-page-footer .mkdf-footer-top-holder .mkdf-footer-top-inner.mkdf-full-width {
+  padding: 67px 50px 16px;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #1a1b19;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder.mkdf-transparent-footer-bottom {
+  background-color: transparent;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner {
+  border-top: 1px solid #404040;
+  box-sizing: border-box;
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-grid {
+  padding: 9px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-grid .mkdf-grid-row > div {
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-grid .mkdf-grid-row > div {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+.mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-full-width {
+  padding: 9px 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-full-width .mkdf-grid-row > div {
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .mkdf-page-footer .mkdf-footer-bottom-holder .mkdf-footer-bottom-inner.mkdf-full-width .mkdf-grid-row > div {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/footer-map.css.map */

@@ -1,0 +1,438 @@
+/* ==========================================================================
+   Blog Common style - begin
+   ========================================================================== */
+
+.mkdf-blog-holder {
+    @include mkdfRelativeHolderLayout();
+    margin: 0 0 40px;
+    clear: both;
+
+    article {
+        @include mkdfRelativeHolderLayout();
+        box-sizing: border-box;
+
+        &.sticky {
+
+            .mkdf-post-title a {
+                color: $first-main-color;
+            }
+        }
+
+        .mkdf-post-content {
+            @include mkdfRelativeHolderLayout();
+        }
+
+        .mkdf-post-image {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+
+            img {
+                display: block;
+            }
+        }
+    
+        .mkdf-post-image-background {
+            @include mkdfRelativeHolderLayout();
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        
+            a {
+                @include mkdfAbsoluteHolderLayout();
+            }
+        }
+    
+        .mkdf-post-image-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            line-height: 1;
+            color: #fff;
+        }
+
+        .mkdf-post-text {
+            @include mkdfRelativeHolderLayout();
+            box-sizing: border-box;
+        }
+    
+        .mkdf-post-title {
+            margin: 0;
+        }
+    
+        .mkdf-post-excerpt-holder {
+            @include mkdfRelativeHolderLayout();
+            margin: 15px 0 0;
+        
+            p {
+                margin: 0;
+            }
+        }
+    
+        .mkdf-post-excerpt {
+        
+            &:after {
+                content: '...';
+            }
+        }
+    
+        .mkdf-more-link-container {
+            @include mkdfRelativeHolderLayout();
+            margin: 15px 0 0;
+        }
+
+        .mkdf-post-info {
+            @include mkdfRelativeHolderLayout();
+
+            > * {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                color: currentColor;
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    
+        .mkdf-post-info-top {
+            margin-bottom: 5px;
+        
+            > div {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 14px 0 0;
+                color: $default-text-color;
+                font-size: 13px;
+                letter-spacing: .05em;
+    
+                &:after {
+                    content: '/';
+                    position: absolute;
+                    top: 0;
+                    right: -2px;
+                }
+    
+                &:last-child {
+                    padding: 0;
+        
+                    &:after {
+                        content: '';
+                    }
+                }
+    
+                a {
+                    color: inherit;
+        
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+        }
+    
+        .mkdf-post-info-bottom {
+            padding-top: 17px;
+
+            .mkdf-post-info-bottom-left,
+            .mkdf-post-info-bottom-right {
+                @include mkdfRelativeHolderLayout();
+            }
+	
+	        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+		
+		        .mkdf-post-info-bottom-left,
+		        .mkdf-post-info-bottom-right {
+			        width: 50%;
+		        }
+		
+		        .mkdf-post-info-bottom-left {
+			        float: left;
+		        }
+		
+		        .mkdf-post-info-bottom-right {
+			        text-align: right;
+			        float: right;
+		        }
+	        }
+    
+            .mkdf-post-info-bottom-right {
+        
+                > div {
+                    margin-left: 17px;
+            
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    
+        //Link post style
+        &.format-link {
+        
+            .mkdf-post-text{
+                padding: 50px 53px;
+                background-color: #fbfbfb;
+            }
+        
+            .mkdf-post-text-main {
+                display: block;
+                text-align: center;
+            }
+        
+            .mkdf-post-mark {
+                display: block;
+                text-align: right;
+            
+                .mkdf-link-mark {
+                    padding-top: 5px;
+                    font-size: 24px;
+                    color: #000;
+                }
+            }
+        
+            .mkdf-post-link-holder {
+               display: block;
+                text-align: center;
+            }
+        }
+    
+        //Quote post style
+        &.format-quote {
+        
+            .mkdf-post-text {
+                padding: 50px 53px;
+                background-color: #fbfbfb;
+            }
+        
+            .mkdf-post-text-main {
+                display: block;
+                text-align: center;
+            }
+        
+            .mkdf-post-mark {
+                display: block;
+                text-align: right;
+            
+                .mkdf-quote-mark {
+                    padding-top: 5px;
+                    font-size: 24px;
+                    color: #000;
+                }
+            }
+        
+            .mkdf-post-link-holder {
+                @include mkdfTableCellLayout();
+                vertical-align: top;
+                text-align: left;
+            }
+        
+            .mkdf-post-author {
+                display: inline-block;
+                margin-bottom: 23px;
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+
+        //Gallery post style
+        &.format-gallery {
+
+            .mkdf-post-image {
+                width: 100%;
+            }
+
+            .owl-carousel .owl-item {
+                z-index: 2;
+
+                &.active {
+                    z-index: 3;
+                }
+            }
+        }
+
+        //Audio post style
+        &.format-audio {
+    
+            &.has-post-thumbnail {
+        
+                .mkdf-post-heading {
+                    position: relative;
+                }
+        
+                .mkdf-blog-audio-holder {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+    
+            .mkdf-post-image {
+                width: 100%;
+                max-width: inherit;
+        
+                img {
+                    width: 100%;
+                }
+            }
+
+            .mkdf-blog-audio-holder {
+
+                .mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
+                    background: none;
+                }
+
+                .mejs-container {
+                    background-color: $default-heading-color;
+                }
+
+                .mejs-container,
+                .mejs-container .mejs-controls {
+                    height: 38px !important;
+                }
+
+                .mejs-container .mejs-controls {
+                    padding: 0 10px 0 4px;
+                    box-sizing: border-box;
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button {
+                    width: 39px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    width: 30px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button,
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    height: 38px;
+
+                    button {
+                        position: relative;
+                        height: 100%;
+                        background: none;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        margin: 0;
+                        border: 0;
+                        outline: none;
+                    }
+
+                    &.mejs-play button {
+                        width: 39px;
+                        background-image: url('../img/audio/play.png');
+                    }
+
+                    &.mejs-pause button {
+                        width: 39px;
+                        background-image: url('../img/audio/pause.png');
+                    }
+
+                    &.mejs-stop button {
+                        width: 39px;
+                        background-image: url('../img/audio/stop.png');
+                    }
+
+                    &.mejs-mute button {
+                        width: 30px;
+                        background-image: url('../img/audio/sound.png');
+                    }
+
+                    &.mejs-unmute button {
+                        width: 30px;
+                        background-image: url('../img/audio/mute.png');
+                    }
+                }
+
+                .mejs-container .mejs-controls > .mejs-time {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 40px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-time-rail {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+
+                    .mejs-time-total {
+                        height: 5px;
+                        margin: 17px 0;
+                        background: none;
+                        background-color: #fff;
+
+                        .mejs-time-current {
+                            height: 5px;
+                            background-color: $first-main-color;
+                        }
+
+                        .mejs-time-hovered,
+                        .mejs-time-handle{
+                            display: none;
+                        }
+
+                        .mejs-time-float {
+                            top: -14px;
+                            border: 0;
+                            color: #fff;
+
+                            .mejs-time-float-corner {
+                                border-top-color: $default-heading-color;
+                            }
+                        }
+
+                        .mejs-time-loaded{
+                            height: 5px;
+                        }
+
+                        .mejs-time-loaded,
+                        .mejs-time-float {
+                            background: none;
+                        }
+                    }
+                }
+
+                .mejs-container .mejs-controls > a.mejs-horizontal-volume-slider {
+                    height: 38px;
+
+                    .mejs-horizontal-volume-total,
+                    .mejs-horizontal-volume-current {
+                        height: 5px;
+                        background: none;
+                    }
+
+                    .mejs-horizontal-volume-total {
+                        background-color: #fff;
+                    }
+
+                    .mejs-horizontal-volume-current {
+                        background-color: $first-main-color;
+                    }
+                }
+            }
+        }
+
+        &.format-video {
+            
+            .mkdf-self-hosted-video {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Blog Common style - end
+   ========================================================================== */

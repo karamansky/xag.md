@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Blog Single style - begin
+   ========================================================================== */
+
+.mkdf-blog-holder.mkdf-blog-single {
+	
+	article {
+		margin: 0 0 30px;
+
+		&.has-post-thumbnail {
+			.mkdf-post-heading {
+
+				.mkdf-post-date-inner{
+					display: inline-block;
+					position: absolute;
+					top: 12px;
+					left: 12px;
+					background-color: #fff;
+					text-align: center;
+					padding: 14px 15px 2px;
+					z-index: 1;
+
+					.mkdf-post-date-day,
+					.mkdf-post-date-month{
+						color: $default-heading-color;
+						text-transform: uppercase;
+						font-weight: 700;
+					}
+
+					.mkdf-post-date-day{
+						font-size: 24px;
+						font-family: $default-heading-font;
+						line-height: 1em;
+					}
+
+					.mkdf-post-date-month{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.mkdf-post-content{
+			.mkdf-post-text{
+				padding: 37px 37px 37px;
+				background-color: #fff;
+			}
+		}
+
+		.mkdf-post-info-bottom{
+			margin-top: 27px;
+			padding: 4px 0 32px;
+			border-bottom: 1px solid #e7e8ee;
+			.mkdf-post-info-bottom-left{
+				width: 80%;
+
+				> div{
+					padding-right: 15px;
+					display: inline-block;
+					width: auto;
+
+					a{
+						color: $default-text-color;
+
+						&:hover{
+							color: $default-heading-color;
+						}
+					}
+
+					.dripicon {
+						position: relative;
+						top: 2px;
+                        margin-right: 5px;
+					}
+
+					&.mkdf-post-info-author{
+						.mkdf-post-info-author-link{
+							position: relative;
+						}
+						.mkdf-blog-author-image{
+							padding-right: 50px;
+							img{
+								border-radius: 50%;
+								position: absolute;
+								top: 50%;
+								@include mkdfTransform(translateY(-50%));
+							}
+						}
+					}
+				}
+
+			}
+			.mkdf-post-info-bottom-right{
+				width: 20%;
+				.mkdf-social-share-holder.mkdf-dropdown .mkdf-social-share-dropdown-opener .mkdf-social-share-title{
+					display: none;
+				}
+			}
+		}
+		
+		.mkdf-post-heading {
+			margin-bottom: 0;
+		}
+		
+		.mkdf-post-text {
+			padding: 0 0 21px;
+			border-bottom: 1px solid #e1e1e1;
+		}
+
+        &.format-link{
+
+            .mkdf-post-text{
+                padding: 57px 19px 8px 50px;
+                border: 0;
+
+                .mkdf-post-title{
+                    font-style: italic;
+                    margin-bottom: 9px;
+                    font-weight: 400;
+                    text-align: left;
+                }
+            }
+
+            .mkdf-post-additional-content{
+                padding: 37px;
+                border-bottom: 1px solid #e7e8ee;
+            }
+        }
+
+        &.format-quote{
+
+            .mkdf-post-text{
+                padding: 57px 19px 8px 50px;
+                border: 0;
+
+                .mkdf-post-text-main{
+                    text-align: left;
+                }
+
+                .mkdf-post-title{
+                    font-style: italic;
+                    margin-bottom: 9px;
+                    font-weight: 400;
+                }
+
+                .mkdf-quote-author{
+                    position: relative;
+                    text-transform: uppercase;
+                    color: $first-main-color;
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: .1em;
+
+                    .mkdf-author-name{
+                        padding-left: 35px;
+                    }
+
+                    &:before{
+                        content: ' ';
+                        width: 25px;
+                        height: 2px;
+                        background-color: $first-main-color;
+                        position: absolute;
+                        top: 50%;
+                        @include mkdfTransform(translateY(-50%));
+                    }
+
+                }
+            }
+
+            .mkdf-post-mark{
+                .mkdf-quote-mark{
+                    font-size: 30px;
+                    color: #2d2e32;
+                }
+            }
+
+            .mkdf-post-additional-content{
+                padding: 37px;
+                border-bottom: 1px solid #e7e8ee;
+            }
+        }
+	}
+}
+/* ==========================================================================
+   Blog Single style - end
+   ========================================================================== */

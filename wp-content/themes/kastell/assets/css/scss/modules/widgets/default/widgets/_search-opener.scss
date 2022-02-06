@@ -1,0 +1,30 @@
+.mkdf-search-opener{
+    .mkdf-search-opener-wrapper{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        img{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &.mkdf-search-image-light{
+                opacity: 0;
+
+            }
+
+            .mkdf-light-header &{
+                &.mkdf-search-image-light{
+                    opacity: 1;
+                }
+                &.mkdf-search-image-dark{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

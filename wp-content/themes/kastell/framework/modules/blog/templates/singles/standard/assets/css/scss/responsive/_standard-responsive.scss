@@ -1,0 +1,42 @@
+.mkdf-blog-holder.mkdf-blog-single {
+
+    @include laptop-landscape-medium{
+        article {
+
+            .mkdf-post-info-bottom {
+
+                .mkdf-post-info-bottom-left{
+                    width: 90%;
+
+                    >div{
+                        padding-right: 10px;
+                    }
+                }
+
+                .mkdf-post-info-bottom-right {
+                    width: 10%;
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait {
+    
+        article {
+        
+            .mkdf-post-info-bottom {
+            
+                .mkdf-post-info-bottom-left,
+                .mkdf-post-info-bottom-right {
+                    width: 100%;
+                    float: none;
+                }
+            
+                .mkdf-post-info-bottom-right {
+                    text-align: inherit;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}

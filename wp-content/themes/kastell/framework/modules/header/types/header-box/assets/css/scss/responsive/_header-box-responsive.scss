@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Header Box responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium{
+    .mkdf-header-box {
+        .mkdf-page-header {
+            .mkdf-menu-area {
+                margin: 0 40px;
+
+                .mkdf-vertical-align-containers{
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@include ipad-landscape {
+	
+	.mkdf-top-bar-background {
+		display: none;
+	}
+}
+/* ==========================================================================
+   Header Box responsive style - end
+   ========================================================================== */
